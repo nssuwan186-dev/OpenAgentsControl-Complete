@@ -163,19 +163,19 @@ cp -r .opencode/context ~/.opencode/
 
 ### Step 3: Start Building
 ```bash
-# Start the main development agent (recommended for new users)
-opencode --agent codebase-agent
+# Start the universal agent (recommended for new users)
+opencode --agent openagent
 
-# Tell it what to build
+# Ask questions or request tasks
 > "Create a React todo list with TypeScript"
 ```
 
 **What happens next:**
-1. Agent proposes an implementation plan
-2. Asks for your approval
-3. Implements step-by-step with validation
-4. Delegates to @task-manager for complex features
-5. Uses @tester and @reviewer for quality assurance
+1. OpenAgent analyzes your request (question or task)
+2. For tasks: proposes a plan and asks for approval
+3. Executes step-by-step with validation
+4. Delegates to specialists (@task-manager, @tester, @reviewer) when needed
+5. Confirms completion and offers cleanup
 
 ---
 
@@ -184,12 +184,13 @@ opencode --agent codebase-agent
 ```
 User Request
     ↓
-codebase-agent (main coordinator)
+openagent (universal coordinator)
     ↓
     ├─→ @task-manager (breaks down complex features)
     ├─→ @tester (writes and runs tests)
     ├─→ @reviewer (security and code review)
     ├─→ @documentation (generates docs)
+    ├─→ @coder-agent (implementation tasks)
     └─→ @build-agent (type checking and validation)
 ```
 
@@ -208,7 +209,8 @@ codebase-agent (main coordinator)
 ## What's Included
 
 ### 🤖 Main Agents
-- **codebase-agent** - Your main development partner (recommended for most tasks)
+- **openagent** - Universal agent for questions and tasks (recommended default)
+- **codebase-agent** - Specialized development agent for code-focused workflows
 - **task-manager** - Breaks complex features into manageable subtasks
 - **workflow-orchestrator** - Routes requests to appropriate workflows
 - **image-specialist** - Generates images with Gemini AI
@@ -240,16 +242,17 @@ codebase-agent (main coordinator)
 
 ### Build a Feature
 ```bash
-opencode --agent codebase-agent
+opencode --agent openagent
 > "Create a user authentication system with email/password"
 
-# Agent will:
-# 1. Propose implementation plan
-# 2. Wait for your approval
-# 3. Delegate to @task-manager (creates tasks/subtasks/user-auth/)
-# 4. Implement step-by-step
-# 5. Use @tester for tests
-# 6. Use @reviewer for security review
+# OpenAgent will:
+# 1. Analyze the request (complex task)
+# 2. Propose implementation plan
+# 3. Wait for your approval
+# 4. Delegate to @task-manager (creates task breakdown)
+# 5. Coordinate implementation step-by-step
+# 6. Use @tester for tests and @reviewer for security
+# 7. Validate, summarize, and confirm completion
 ```
 
 ### Make a Commit
@@ -370,7 +373,7 @@ cp env.example .env
 ## Common Questions
 
 **Q: What's the main way to use this?**  
-A: Use `opencode --agent codebase-agent` for development. It coordinates everything else.
+A: Use `opencode --agent openagent` as your default. It handles both questions and tasks, coordinating with specialists as needed.
 
 **Q: Does this work on Windows?**  
 A: Yes! Use Git Bash (recommended) or WSL. See [Platform Compatibility Guide](docs/getting-started/platform-compatibility.md) for details.
@@ -524,14 +527,17 @@ This project is licensed under the MIT License.
 
 ## Recommended for New Users
 
-**Start with `codebase-agent`** - it's your main development partner that handles planning, implementation, and quality assurance. It automatically delegates to specialized subagents when needed, so you don't have to manage multiple agents yourself.
+**Start with `openagent`** - it's your universal assistant that handles everything from simple questions to complex multi-step workflows. It follows a systematic 6-stage workflow (Analyze → Approve → Execute → Validate → Summarize → Confirm) and automatically delegates to specialized subagents when needed.
 
 ```bash
-opencode --agent codebase-agent
-> "Your development task here"
+opencode --agent openagent
+> "How do I implement authentication in Next.js?"  # Questions
+> "Create a user authentication system"            # Tasks
 ```
 
-The agent will guide you through the entire development workflow with a plan-first, approval-based approach.
+OpenAgent will guide you through with a plan-first, approval-based approach. For questions, you get direct answers. For tasks, you see the plan before execution.
+
+**Learn more:** See the [OpenAgent Guide](docs/agents/openagent.md) for detailed workflow diagrams and tips.
 
 ---
 ## Support This Work

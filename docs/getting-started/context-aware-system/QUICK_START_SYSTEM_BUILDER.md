@@ -341,7 +341,7 @@ When you install **advanced** profile, you get:
 7. `build-context-system` (command) - Interactive interface
 
 **Plus all development tools:**
-- task-manager, codebase-agent
+- openagent, task-manager, codebase-agent
 - All core subagents (reviewer, tester, etc.)
 - All development commands
 - Tools and plugins

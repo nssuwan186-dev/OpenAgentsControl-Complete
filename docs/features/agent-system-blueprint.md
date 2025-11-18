@@ -14,14 +14,14 @@ _Build Intelligent Workflow Systems with Context-Aware AI_
 - Extend the system with domain-specific patterns
 - Learn how context loading and agent coordination works
 
-**If you just want to start building**, skip this document and use `codebase-agent` instead. See the [README.md](../../README.md) for quick start instructions.
+**If you just want to start building**, skip this document and use `openagent` instead. See the [README.md](../../README.md) for quick start instructions.
 
 ---
 
 ## ⚡ TL;DR - Quick Reference
 
 **For New Users:**
-- Start with `opencode --agent codebase-agent` for all development work
+- Start with `opencode --agent openagent` for all questions and tasks
 - The agent handles planning, implementation, testing, and review automatically
 - Add your coding patterns to `.opencode/context/project/project-context.md`
 - Let the agent delegate to specialized subagents when needed
@@ -41,7 +41,7 @@ Commands load context → Agents execute with that context → Subagents handle 
 - ✅ You want to create custom agents or commands
 - ✅ You need to understand how context loading works
 - ✅ You want to extend the system for your specific needs
-- ❌ You just want to start building (use `codebase-agent` instead)
+- ❌ You just want to start building (use `openagent` instead)
 
 ---
 
@@ -63,7 +63,7 @@ This blueprint explains the architecture patterns behind the OpenCode agent syst
 **When you see commands like `/workflow`, `/plan-task`, `/create-frontend-component`:**
 - These are pattern examples showing how you COULD structure commands
 - Most aren't implemented in the repository
-- The existing `codebase-agent` already handles these workflows
+- The existing `openagent` and `codebase-agent` already handle these workflows
 - Create them only if you have specific repeated patterns
 
 **When you see extensive context hierarchies:**
@@ -73,6 +73,7 @@ This blueprint explains the architecture patterns behind the OpenCode agent syst
 
 **When you see task management structures:**
 - The `task-manager` agent creates `tasks/` directories automatically
+- `openagent` creates session files in `.tmp/sessions/` for context preservation
 - No need to pre-create structures
 
 ---
@@ -175,7 +176,8 @@ OpenCode processes `@` references only in command templates, NOT recursively in 
 **What they do:** AI workers with specific capabilities and predictable behavior
 
 **Main agents in this repo:**
-- `codebase-agent` - Main development partner
+- `openagent` - Universal agent for questions and tasks (recommended default)
+- `codebase-agent` - Specialized development partner
 - `task-manager` - Breaks down complex features
 - `workflow-orchestrator` - Routes requests
 - `image-specialist` - Image generation
@@ -417,16 +419,16 @@ Don't create custom agents when:
 
 **Don't create specialized commands/agents right away. Instead:**
 
-1. **Start with `codebase-agent`** for everything
+1. **Start with `openagent`** for everything (questions and tasks)
 2. **Add context files** for your tech stack as needed
-3. **Use `@task-manager`** when features get complex
-4. **Let subagents** handle specialized work (@tester, @reviewer)
+3. **Use `@task-manager`** when features get complex (openagent delegates automatically)
+4. **Let subagents** handle specialized work (@tester, @reviewer, @coder-agent)
 5. **Create specialized commands** only when you have repeated workflows
 6. **Use `/prompt-enchancer`** when building custom agents
 
 ### Example Progression
 
-**Week 1:** Use `codebase-agent` for everything
+**Week 1:** Use `openagent` for everything (questions and tasks)
 **Week 2:** Add project-specific context to `project/project-context.md`
 **Week 3:** Agent automatically picks up your patterns
 **Week 4:** Create a command if you have repeated workflows (use `/prompt-enchancer`)
