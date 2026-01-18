@@ -2459,27 +2459,29 @@
         "category": "standard"
       },
       {
-        "id": "workflows-delegation",
-        "name": "Delegation Workflow",
+        "id": "delegation-ref",
+        "name": "Delegation Workflow Reference",
         "type": "context",
         "path": ".opencode/context/core/workflows/delegation.md",
-        "description": "Delegation Workflow (Symlink)",
+        "description": "Quick reference to delegation workflow (see task-delegation.md for full content)",
         "tags": [
           "workflows",
-          "delegation"
+          "delegation",
+          "reference"
         ],
         "dependencies": [],
         "category": "standard"
       },
       {
-        "id": "workflows-review",
-        "name": "Review Workflow",
+        "id": "review-ref",
+        "name": "Review Workflow Reference",
         "type": "context",
         "path": ".opencode/context/core/workflows/review.md",
-        "description": "Review Workflow (Symlink)",
+        "description": "Quick reference to code review workflow (see code-review.md for full content)",
         "tags": [
           "workflows",
-          "review"
+          "review",
+          "reference"
         ],
         "dependencies": [],
         "category": "standard"
