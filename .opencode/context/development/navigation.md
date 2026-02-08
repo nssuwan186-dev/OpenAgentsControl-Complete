@@ -26,11 +26,12 @@ development/
 │   ├── navigation.md
 │   └── mastra-ai/
 │
-├── frontend/                  # Client-side (future)
+├── frontend/                  # Client-side
 │   ├── navigation.md
-│   ├── react/
-│   ├── vue/
-│   └── state-management/
+│   ├── when-to-delegate.md    # When to use frontend-specialist
+│   └── react/
+│       ├── navigation.md
+│       └── react-patterns.md
 │
 ├── backend/                   # Server-side (future)
 │   ├── navigation.md
@@ -64,6 +65,7 @@ development/
 | Task | Path |
 |------|------|
 | **UI/Frontend** | `ui-navigation.md` |
+| **When to delegate frontend** | `frontend/when-to-delegate.md` |
 | **Backend/API** | `backend-navigation.md` |
 | **Full-stack** | `fullstack-navigation.md` |
 | **Clean code** | `principles/clean-code.md` |
@@ -76,7 +78,7 @@ development/
 **Principles** → Universal development practices
 **Frameworks** → Full-stack frameworks (Tanstack Start, Next.js)
 **AI** → AI frameworks and agent runtimes (MAStra AI)
-**Frontend** → React, Vue, state management (future)
+**Frontend** → React patterns and component design
 **Backend** → APIs, Node.js, Python, auth (future)
 **Data** → SQL, NoSQL, ORMs (future)
 **Integration** → Packages, APIs, services (future)

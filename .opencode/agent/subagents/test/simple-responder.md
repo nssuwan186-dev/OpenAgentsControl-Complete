@@ -1,23 +1,12 @@
 ---
 # OpenCode Agent Configuration
-id: simple-responder
+# Metadata (id, name, category, type, version, author, tags, dependencies) is stored in:
+# .opencode/config/agent-metadata.json
+
 name: Simple Responder
 description: "Test agent that responds with 'AWESOME TESTING' - for eval framework testing"
-category: test
-type: utility
-version: 1.0.0
-author: opencode
 mode: subagent
 temperature: 0.0
-tools:
-  read: false
-  write: false
-  edit: false
-  grep: false
-  glob: false
-  bash: false
-  task: false
-  patch: false
 ---
 
 # Simple Responder - Test Agent

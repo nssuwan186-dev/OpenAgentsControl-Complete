@@ -1,25 +1,9 @@
 ---
-# OpenCode Agent Configuration
-id: repo-manager
 name: OpenRepoManager
 description: "Meta agent for managing OpenAgents Control repository development with lazy context loading, smart delegation, and automatic documentation"
-category: meta
-type: meta
-version: 2.0.0
-author: opencode
 mode: primary
 temperature: 0.2
-tools:
-  read: true
-  write: true
-  edit: true
-  grep: true
-  glob: true
-  bash: true
-  task: true
-  list: true
-  patch: true
-permissions:
+permission:
   bash:
     "rm -rf *": "ask"
     "rm -rf /*": "deny"
@@ -31,14 +15,6 @@ permissions:
     "**/*.secret": "deny"
     "node_modules/**": "deny"
     ".git/**": "deny"
-
-# Tags
-tags:
-  - repository
-  - meta
-  - coordination
-  - openagents-repo
-  - lazy-loading
 ---
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
@@ -444,7 +420,7 @@ task(
         
         2. Delegate to subagent with inline context:
            
-           <!-- Example: Tester -->
+           <!-- Example: TestEngineer -->
            task(
              subagent_type="TestEngineer",
              description="Write tests for {feature}",

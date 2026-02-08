@@ -31,10 +31,9 @@ Based on the OpenCode CLI registration, use these exact strings for `subagent_ty
 
 **Code Subagents**:
 - `"Coder Agent"` - Code implementation
-- `"Tester"` - Test authoring
+- `"TestEngineer"` - Test authoring
 - `"Reviewer"` - Code review
 - `"Build Agent"` - Build validation
-- `"Codebase Pattern Analyst"` - Pattern analysis
 
 **System Builder Subagents**:
 - `"Domain Analyzer"` - Domain analysis
@@ -98,11 +97,10 @@ cat registry.json | jq -r '.components.subagents[] | "\(.name)"'
 Task Manager
 Image Specialist
 Reviewer
-Tester
+TestEngineer
 Documentation Writer
 Coder Agent
 Build Agent
-Codebase Pattern Analyst
 Domain Analyzer
 Agent Generator
 Context Organizer
@@ -170,11 +168,11 @@ task(
 )
 ```
 
-### Tester
+### TestEngineer
 
 ```javascript
 task(
-  subagent_type="Tester",
+  subagent_type="TestEngineer",
   description="Write tests for feature",
   prompt="Write comprehensive tests for {feature}:
           
@@ -266,7 +264,6 @@ read(filePath=".opencode/context/openagents-repo/core-concepts/registry.md")
 
 1. **repo-manager.md** - Uses `ContextScout`
 2. **opencoder.md** - Check if uses incorrect format
-3. **codebase-agent.md** - Check if uses incorrect format
 
 ### Fix Process
 
@@ -299,11 +296,10 @@ read(filePath=".opencode/context/openagents-repo/core-concepts/registry.md")
 available_types = [
   "Task Manager",
   "Documentation",
-  "Tester",
+  "TestEngineer",
   "Reviewer",
   "Coder Agent",
   "Build Agent",
-  "Codebase Pattern Analyst",
   "Image Specialist",
   "Domain Analyzer",
   "Agent Generator",

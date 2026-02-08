@@ -25,12 +25,12 @@ FAILED=0
 
 pass() {
     echo -e "${GREEN}✓${NC} $1"
-    ((PASSED+=1))
+    PASSED=$((PASSED + 1))
 }
 
 fail() {
     echo -e "${RED}✗${NC} $1"
-    ((FAILED+=1))
+    FAILED=$((FAILED + 1))
 }
 
 warn() {
@@ -42,6 +42,7 @@ setup() {
     mkdir -p "$TEST_DIR"
 }
 
+# shellcheck disable=SC2329
 cleanup() {
     rm -rf "$TEST_DIR"
 }

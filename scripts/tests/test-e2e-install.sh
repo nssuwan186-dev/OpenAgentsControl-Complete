@@ -17,12 +17,12 @@ FAILED=0
 
 pass() {
     echo -e "${GREEN}✓${NC} $1"
-    ((PASSED+=1))
+    PASSED=$((PASSED + 1))
 }
 
 fail() {
     echo -e "${RED}✗${NC} $1"
-    ((FAILED+=1))
+    FAILED=$((FAILED + 1))
 }
 
 warn() {
@@ -34,6 +34,7 @@ setup() {
     mkdir -p "$TEST_DIR"
 }
 
+# shellcheck disable=SC2329
 cleanup() {
     rm -rf "$TEST_DIR"
 }
@@ -71,7 +72,7 @@ test_essential_profile() {
             pass "Found: $file"
         else
             fail "Missing: $file"
-            ((missing+=1))
+            missing=$((missing + 1))
         fi
     done
     
@@ -101,7 +102,7 @@ test_developer_profile() {
     local found=0
     for file in "${expected_files[@]}"; do
         if [ -f "$install_dir/$file" ]; then
-            ((found+=1))
+            found=$((found + 1))
         fi
     done
     

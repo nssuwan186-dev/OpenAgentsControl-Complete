@@ -120,11 +120,6 @@ README.md                            # Main documentation
 ```
 .opencode/agent/core/openagent.md
 .opencode/agent/core/opencoder.md
-```
-
-### Meta Agents
-
-```
 .opencode/agent/meta/system-builder.md
 ```
 
@@ -132,9 +127,10 @@ README.md                            # Main documentation
 
 ```
 .opencode/agent/development/frontend-specialist.md
-.opencode/agent/development/backend-specialist.md
 .opencode/agent/development/devops-specialist.md
-.opencode/agent/development/codebase-agent.md
+```
+.opencode/agent/development/frontend-specialist.md
+.opencode/agent/development/devops-specialist.md
 ```
 
 ### Content Agents
@@ -214,7 +210,7 @@ evals/framework/src/types/            # TypeScript types
 
 **Examples**:
 - `.opencode/context/core/standards/code-quality.md`
-- `.opencode/context/development/react-patterns.md`
+- `.opencode/context/development/frontend/react/react-patterns.md`
 - `.opencode/context/content-creation/principles/copywriting-frameworks.md`
 
 ### Tests

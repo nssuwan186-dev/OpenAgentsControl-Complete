@@ -71,9 +71,7 @@ Agents:
 
 Agents:
 - `frontend-specialist.md` - React, Vue, modern CSS
-- `backend-specialist.md` - APIs, databases, servers
 - `devops-specialist.md` - CI/CD, deployment, infrastructure
-- `codebase-agent.md` - Codebase exploration and analysis
 
 **When to use**: Building applications, dev tasks
 
@@ -131,7 +129,6 @@ Agents:
    - `reviewer.md` - Code review and security
    - `coder-agent.md` - Focused implementations
    - `build-agent.md` - Type checking and builds
-   - `codebase-pattern-analyst.md` - Pattern analysis
 
 2. **core/** - Core workflow specialists
    - `task-manager.md` - Task breakdown and management

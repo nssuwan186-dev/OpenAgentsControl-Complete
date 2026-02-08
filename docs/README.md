@@ -87,10 +87,21 @@ docs/
 
 ## 💡 Additional Resources
 
-- **Main README**: [../README.md](../README.md)
+- **Main README**: [../README.md](../README.md) - Complete overview and quick start
+- **CHANGELOG**: [../CHANGELOG.md](../CHANGELOG.md) - Version history and updates
 - **GitHub Repository**: https://github.com/darrenhinde/OpenAgentsControl
 - **OpenCode CLI Docs**: https://opencode.ai/docs
 - **Component Registry**: [../registry.json](../registry.json)
+
+## 📌 Current Version
+
+**v0.6.0** (January 28, 2026)
+
+Latest updates:
+- ExternalScout subagent for fetching live library documentation (18+ libraries)
+- Enhanced ContextScout with multi-model optimization
+- Complete command and agent documentation
+- Simplified agent architecture (OpenAgent + OpenCoder)
 
 ## 🤝 Community
 
