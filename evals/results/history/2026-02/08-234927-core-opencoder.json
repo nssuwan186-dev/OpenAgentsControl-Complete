@@ -1,16 +1,16 @@
 {
   "meta": {
-    "timestamp": "2026-02-10T13:16:17.383Z",
+    "timestamp": "2026-02-08T16:49:27.105Z",
     "agent": "core/opencoder",
     "model": "opencode/grok-code-fast",
     "framework_version": "0.1.0",
-    "git_commit": "2d50ea7"
+    "git_commit": "013682c"
   },
   "summary": {
     "total": 1,
     "passed": 1,
     "failed": 0,
-    "duration_ms": 71509,
+    "duration_ms": 47929,
     "pass_rate": 1
   },
   "by_category": {
@@ -24,7 +24,7 @@
       "id": "simple-bash-test-001",
       "category": "developer",
       "passed": true,
-      "duration_ms": 71509,
+      "duration_ms": 47929,
       "events": 4,
       "approvals": 0,
       "violations": {
